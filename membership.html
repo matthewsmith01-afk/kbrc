@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Membership - Kachemak Bay Running Club</title>
+<meta name="description" content="Join the Kachemak Bay Running Club. Individual, Family, Sponsor and Super Sponsor memberships support youth running and get you discounted race entry in Homer, Alaska.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231b5580'/%3E%3Cpath d='M12 66 L34 34 L48 54 L62 28 L88 66 Z' fill='%23e9f5f7'/%3E%3Ccircle cx='68' cy='30' r='9' fill='%23f4a63c'/%3E%3C/svg%3E">
+<style>
+  .form-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(1.6rem, 3vw, 2.6rem); box-shadow: var(--shadow-md); }
+  .field { margin-bottom: 1.1rem; }
+  .field label { display: block; font-family: var(--font-sans); font-weight: 600; font-size: 0.85rem; color: var(--bay-800); margin-bottom: 0.4rem; }
+  .field input, .field select { width: 100%; font: inherit; font-size: 0.95rem; padding: 0.8rem 1rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--paper-2); color: var(--ink); transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease); }
+  .field input:focus, .field select:focus { outline: none; border-color: var(--bay-500); box-shadow: 0 0 0 3px rgba(42,119,168,0.18); background: #fff; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 520px){ .field-row { grid-template-columns: 1fr; } }
+  .tier-select { display: grid; gap: 0.7rem; margin-bottom: 1.4rem; }
+  .tier-option { display: flex; align-items: center; gap: 0.9rem; border: 1.5px solid var(--line); border-radius: var(--radius); padding: 0.9rem 1.1rem; cursor: pointer; transition: border-color 0.2s var(--ease), background 0.2s var(--ease); }
+  .tier-option:hover { border-color: var(--bay-500); }
+  .tier-option input { accent-color: var(--fireweed); width: 20px; height: 20px; }
+  .tier-option:has(input:checked) { border-color: var(--fireweed); background: rgba(215,69,126,0.05); }
+  .tier-option .t-name { font-family: var(--font-sans); font-weight: 700; }
+  .tier-option .t-price { margin-left: auto; font-family: var(--font-display); font-size: 1.3rem; color: var(--bay-700); }
+  .form-note { font-size: var(--step--1); color: var(--mist); margin-top: 1rem; }
+  .form-success { display: none; padding: 1.1rem 1.2rem; border-radius: var(--radius); background: rgba(47,125,95,0.12); border: 1px solid rgba(47,125,95,0.4); color: var(--spruce-700); font-family: var(--font-sans); font-weight: 600; margin-bottom: 1.2rem; }
+  .form-success.show { display: block; }
+  .perk-list { display: grid; gap: 0.9rem; margin-top: 1.4rem; }
+  .perk { display: flex; gap: 0.8rem; align-items: flex-start; }
+  .perk svg { flex: none; color: var(--fireweed); margin-top: 3px; }
+  .perk strong { font-family: var(--font-sans); }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header is-scrolled" id="siteHeader">
+  <div class="container container--wide">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Kachemak Bay Running Club home"><img class="brand__logo" src="assets/img/logo.png" data-fallback="assets/img/logo.svg" alt="Kachemak Bay Running Club logo" width="46" height="46"><span class="brand__text"><span class="brand__name">Kachemak Bay</span><span class="brand__tag">Running Club</span></span></a>
+      <ul class="nav__links" id="navLinks">
+        <li><a class="nav__link" href="index.html">Home</a></li>
+        <li><a class="nav__link" href="events.html">Events</a></li>
+        <li><a class="nav__link" href="results.html">Results</a></li>
+        <li><a class="nav__link" href="membership.html" aria-current="page">Membership</a></li>
+        <li><a class="nav__link" href="about.html">About</a></li><li><a class="nav__link" href="board.html">Board</a></li>
+        <li class="nav__cta"><a class="btn btn--accent" href="#join">Join the Club</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <img class="page-hero__photo" src="assets/img/fireweed-bay.jpg" data-fallback="assets/img/fireweed-bay.svg" alt="" aria-hidden="true">
+    <div class="page-hero__bg" aria-hidden="true" style="background:linear-gradient(135deg,#0c2740 0%,#123a5c 45%,#d7457e 115%)"></div>
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">Home</a> / Membership</p>
+      <h1>Run with us. Give back.</h1>
+      <p class="lead">Every membership fuels youth running, keeps races affordable, and connects you to a community of runners and walkers on Kachemak Bay.</p>
+    </div>
+  </section>
+
+  <!-- Tiers -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="eyebrow" style="justify-content:center">Choose your level</span>
+        <h2>Memberships for every runner</h2>
+      </div>
+      <div class="tiers">
+        <div class="tier" data-reveal data-delay="1">
+          <h3>Individual</h3><div class="price">$25<span>/ year</span></div>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Discounted event entry</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Member discount code</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Weekly group runs</li>
+          </ul>
+          <a class="btn btn--ghost" href="https://my.raceresult.com/373834/" target="_blank" rel="noopener">Select</a>
+        </div>
+        <div class="tier tier--featured" data-reveal data-delay="2">
+          <span class="tier__flag">Popular</span>
+          <h3>Family</h3><div class="price">$50<span>/ year</span></div>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Everything in Individual</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Whole household covered</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Kids' fun run priority</li>
+          </ul>
+          <a class="btn btn--sun" href="https://my.raceresult.com/373834/" target="_blank" rel="noopener">Select</a>
+        </div>
+        <div class="tier" data-reveal data-delay="3">
+          <h3>Sponsor</h3><div class="price">$250<span>/ year</span></div>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Business race discounts</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Website advertising</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Logo on event flyers</li>
+          </ul>
+          <a class="btn btn--ghost" href="https://my.raceresult.com/373834/" target="_blank" rel="noopener">Select</a>
+        </div>
+        <div class="tier" data-reveal data-delay="4">
+          <h3>Super Sponsor</h3><div class="price">$500<span>/ year</span></div>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Everything in Sponsor</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Logo on race t-shirts</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Top event recognition</li>
+          </ul>
+          <a class="btn btn--ghost" href="https://my.raceresult.com/373834/" target="_blank" rel="noopener">Select</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join via Race Result -->
+  <section class="section" id="join" style="background:var(--paper-2)">
+    <div class="container">
+      <div class="split" style="align-items:center">
+        <div data-reveal>
+          <span class="eyebrow">Join today</span>
+          <h2 style="font-size:var(--step-4);margin-top:0.9rem">Register in minutes with Race Result</h2>
+          <p class="lead" style="margin-top:1rem">We handle membership registration and payment securely through Race Result, the same platform we use for our races. Choose your level, register online, and you are set for the calendar year.</p>
+          <div class="perk-list">
+            <div class="perk"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><div><strong>Save on every race.</strong> Your member discount applies to the Spit Run, Cosmic Hamlet Half and more.</div></div>
+            <div class="perk"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><div><strong>Support youth running.</strong> Dues and race proceeds fund young runners across the peninsula.</div></div>
+            <div class="perk"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><div><strong>Secure online payment.</strong> Register and pay in one place through Race Result.</div></div>
+          </div>
+        </div>
+
+        <div class="form-card" data-reveal data-delay="1">
+          <h3 style="font-family:var(--font-display);font-size:var(--step-2)">2026 Membership</h3>
+          <p style="color:var(--slate);margin-top:0.5rem">Register online through our Race Result page. Pick your level on the registration form.</p>
+          <ul style="list-style:none;padding:0;margin:1.4rem 0;display:grid;gap:0.7rem">
+            <li style="display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:0.6rem"><span>Individual</span><strong>$25 / year</strong></li>
+            <li style="display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:0.6rem"><span>Family</span><strong>$50 / year</strong></li>
+            <li style="display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:0.6rem"><span>Sponsor</span><strong>$250 / year</strong></li>
+            <li style="display:flex;justify-content:space-between"><span>Super Sponsor</span><strong>$500 / year</strong></li>
+          </ul>
+          <a class="btn btn--accent btn--lg" style="width:100%;justify-content:center" href="https://my.raceresult.com/373834/" target="_blank" rel="noopener">
+            Register on Race Result
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+          <p class="form-note">Registration and payment are handled securely on Race Result. The link opens in a new tab.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Kachemak Bay Running Club home"><img class="brand__logo" src="assets/img/logo.png" data-fallback="assets/img/logo.svg" alt="Kachemak Bay Running Club logo" width="46" height="46"><span class="brand__text"><span class="brand__name">Kachemak Bay</span><span class="brand__tag">Running Club</span></span></a>
+        <p style="margin-top:1.2rem;max-width:34ch">Promoting the joys and benefits of running and walking in Homer, Alaska. A 501(c)(3) nonprofit.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="events.html">Events calendar</a></li><li><a href="results.html">Race results</a></li><li><a href="membership.html">Membership</a></li><li><a href="about.html">About the club</a></li><li><a href="board.html">Our board</a></li></ul></div>
+      <div class="footer-col"><h4>Signature races</h4><ul><li><a href="events.html">The Spit Run 10K</a></li><li><a href="events.html">Cosmic Hamlet Half</a></li><li><a href="events.html">Turkey Trot 5K</a></li><li><a href="events.html">Migration Run</a></li></ul></div>
+      <div class="footer-col"><h4>Get in touch</h4><ul><li><a href="mailto:info@kachemakbayrunningclub.org">info@kachemakbayrunningclub.org</a></li><li><a href="#">P.O. Box, Homer, AK 99603</a></li><li><a href="membership.html">Volunteer with us</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> Kachemak Bay Running Club. All rights reserved.</p>
+      <span class="rrca"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg> Proud member of the Road Runners Club of America</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
