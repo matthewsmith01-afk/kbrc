@@ -333,6 +333,11 @@ h1, h2, h3, h4 {
     text-align: center;
   }
   .nav__link::after { display: none; }
+  /* Keep the current page's link readable on the dark mobile menu (the desktop
+     rule makes it dark navy, which is invisible here). Highlight it in the sun
+     accent so users can still see which page they are on. */
+  .nav__link:hover,
+  .nav__link[aria-current="page"] { color: var(--sun-300); }
   .nav__cta { margin: 1rem 0 0; }
   body.nav-open { overflow: hidden; }
   .nav-toggle.is-active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
