@@ -298,15 +298,24 @@ h1, h2, h3, h4 {
     position: fixed;
     inset: 0;
     flex-direction: column;
-    justify-content: center;
-    gap: 0.4rem;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0.25rem;
     background: linear-gradient(160deg, var(--bay-900), var(--bay-700));
-    padding: 5rem 2rem 2rem;
+    padding: 5.5rem 1.5rem 2rem;
     transform: translateX(100%);
     transition: transform 0.5s var(--ease);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .nav__links.is-open { transform: translateX(0); }
-  .nav__link { color: #eaf4f8; font-size: 1.5rem; font-family: var(--font-display); padding: 0.6rem; }
+  .nav__link {
+    color: #eaf4f8;
+    font-size: clamp(1.3rem, 5vw, 1.6rem);
+    font-family: var(--font-display);
+    padding: 0.55rem 0.4rem;
+    text-align: center;
+  }
   .nav__link::after { display: none; }
   .nav__cta { margin: 1rem 0 0; }
   body.nav-open { overflow: hidden; }
