@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Kachemak Bay Running Club">
+  <!-- Favicon distilled from the KBRC logo: sun, bay blue, green mountains, water. -->
+  <rect width="64" height="64" rx="14" fill="#ffffff"/>
+  <!-- sky/bay blue field -->
+  <rect x="4" y="4" width="56" height="56" rx="11" fill="#1b6bb0"/>
+  <!-- sun (logo yellow) -->
+  <g fill="#f4c020">
+    <circle cx="44" cy="19" r="9"/>
+    <g stroke="#f4c020" stroke-width="2.4" stroke-linecap="round">
+      <path d="M44 5 v-1"/><path d="M57 19 h1"/><path d="M53.4 9.6 l0.9 -0.9"/><path d="M34.6 9.6 l-0.9 -0.9"/>
+    </g>
+  </g>
+  <!-- birds -->
+  <g fill="none" stroke="#eef6fb" stroke-width="1.8" stroke-linecap="round">
+    <path d="M14 22 q3 -3 6 0 q3 -3 6 0"/>
+  </g>
+  <!-- green mountains -->
+  <path d="M4 46 L16 33 L26 43 L36 30 L50 46 Z" fill="#5ab031"/>
+  <path d="M4 46 L60 46 L60 55 a5 5 0 0 1 -5 5 L9 60 a5 5 0 0 1 -5 -5 Z" fill="#5ab031"/>
+  <!-- bay water line -->
+  <path d="M12 53 q10 -4 20 0 t20 0" fill="none" stroke="#eef6fb" stroke-width="2.4" stroke-linecap="round"/>
+</svg>
